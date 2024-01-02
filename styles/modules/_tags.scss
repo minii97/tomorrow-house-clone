@@ -1,0 +1,27 @@
+%tag {
+  @include text-style(12);
+  @include inline-flexbox;
+  height: 20px;
+  padding: 0 6px;
+  font-weight: 700;
+  color: $white;
+  border-radius: 4px;
+}
+
+.tag {
+  &-red {
+    background-color: $red;
+    @extend %tag;
+  }
+
+  &-gray {
+    color: $secondary;
+    background-color: $border;
+    @extend %tag;
+  }
+
+  &-green {
+    background-color: $green;
+    @extend %tag;
+  }
+}
