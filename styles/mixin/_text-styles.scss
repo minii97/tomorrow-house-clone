@@ -28,11 +28,6 @@
     line-height: $line-height-18;
     letter-spacing: $letter-spacing-18;
   }
-  @if ($size==18) {
-    font-size: $font-size-18;
-    line-height: $line-height-18;
-    letter-spacing: $letter-spacing-18;
-  }
   @if ($size==24) {
     font-size: $font-size-24;
     line-height: $line-height-24;
