@@ -1,0 +1,64 @@
+.gnb {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid $border;
+
+  &-wrap {
+    @include flexbox(between);
+    position: relative;
+    height: 50px;
+  }
+
+  &-left,
+  &-right {
+    @include flexbox(start);
+  }
+
+  &-title {
+    @include pos-center;
+    height: 20px;
+
+    a {
+      display: block;
+      height: 100%;
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  // TODO : 나중에 icon-btn은 파일 따로 components로 빼서 관리하자.
+  &-icon-btn {
+    @include inline-flexbox;
+    width: 32px;
+    height: 32px;
+
+    &:active {
+      opacity: 0.4;
+    }
+
+    i {
+      font-size: 24px;
+      color: $secondary;
+    }
+
+    &.menu-btn {
+      i {
+        color: $blue;
+      }
+    }
+  }
+
+  &-button-group {
+    .search-btn {
+      margin-right: 4px;
+    }
+  }
+}
