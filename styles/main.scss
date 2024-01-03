@@ -1,11 +1,12 @@
-@import './base/icon-fonts';
-@import './base/normalize';
-@import './base/reset';
-
 @import './constants/color';
 @import './constants/typography';
 @import './constants/breakpoint';
 @import './constants/grids';
+
+@import './base/icon-fonts';
+@import './base/normalize';
+@import './base/reset';
+@import './base/globals';
 
 @import './mixin/text-styles';
 @import './mixin/responsive';
