@@ -1,0 +1,30 @@
+.gnb-nav {
+  &-list {
+    @include flexbox(start);
+  }
+
+  &-item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-active {
+      a {
+        color: $blue;
+      }
+    }
+
+    a {
+      @include text-style(18, $primary);
+      font-weight: 700;
+      transition: color 200ms ease-in-out;
+
+      &:hover,
+      &:active {
+        color: $blue;
+      }
+    }
+  }
+}
