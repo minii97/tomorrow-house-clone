@@ -1,0 +1,77 @@
+%pagination {
+  @include inline-flexbox;
+  height: 26px;
+  background-color: $white;
+  border-radius: 4px;
+}
+
+.pagination {
+  @include flexbox;
+
+  &-list {
+    @include flexbox;
+  }
+
+  &-item {
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a,
+    button {
+      @extend %pagination;
+      @include text-style(16, $primary);
+      min-width: 26px;
+      padding: 0 4px 2px;
+      font-weight: 700;
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    &.is-active {
+      a,
+      button {
+        color: $white !important;
+        background-color: $blue;
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    @extend %pagination;
+    width: 26px;
+    border: 1px solid $border;
+    transition: opacity 200ms ease-in-out;
+
+    i {
+      font-size: 20px;
+      color: $primary;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .prev {
+    margin-right: 24px;
+
+    i {
+      transform: rotate(90deg);
+    }
+  }
+
+  .next {
+    margin-left: 24px;
+
+    i {
+      transform: rotate(-90deg);
+    }
+  }
+}
