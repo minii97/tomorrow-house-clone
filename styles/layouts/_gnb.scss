@@ -1,26 +1,20 @@
 .gnb {
+  $gnb-height-sm: 50px;
+
   width: 100%;
-  height: 50px;
   border-bottom: 1px solid $border;
 
   &-wrap {
     @include flexbox(between);
     position: relative;
-    height: 50px;
-  }
-
-  &-left,
-  &-right {
-    @include flexbox(start);
+    height: $gnb-height-sm - 1px;
   }
 
   &-title {
     @include pos-center;
-    height: 20px;
 
     a {
       display: block;
-      height: 100%;
 
       &:active {
         opacity: 0.4;
@@ -30,11 +24,10 @@
     img {
       display: block;
       width: auto;
-      height: 100%;
+      height: 20px;
     }
   }
 
-  // TODO : 나중에 icon-btn은 파일 따로 components로 빼서 관리하자.
   &-icon-btn {
     @include inline-flexbox;
     width: 32px;
@@ -59,6 +52,29 @@
   &-button-group {
     .search-btn {
       margin-right: 4px;
+    }
+  }
+
+  @include responsive(T) {
+    height: 80px;
+
+    &-wrap {
+      height: 80px;
+    }
+
+    &-left,
+    &-right {
+      @include flexbox(start);
+    }
+
+    &-title {
+      position: static;
+      margin-right: 32px;
+      transform: translate(0);
+
+      img {
+        height: 24px;
+      }
     }
   }
 }
