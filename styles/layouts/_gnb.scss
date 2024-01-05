@@ -70,6 +70,16 @@
           margin-right: 0;
         }
       }
+
+      .avatar-32 {
+        border: 3px solid transparent;
+        transition: border-color 200ms ease-in-out;
+
+        &:hover,
+        &:active {
+          border-color: $blue;
+        }
+      }
     }
 
     .post-btn {

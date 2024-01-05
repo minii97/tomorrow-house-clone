@@ -1,0 +1,23 @@
+.gnb-icon-btn {
+  @include inline-flexbox;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  color: $secondary;
+  border-radius: 50%;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &.menu-btn {
+    color: $blue;
+  }
+
+  .ic-cart {
+    margin-top: 2px;
+  }
+}
