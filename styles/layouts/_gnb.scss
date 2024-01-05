@@ -1,6 +1,7 @@
 .gnb {
   $gnb-height-sm: 50px;
   $gnb-height-md: 80px;
+  $button-margin-md: 8px;
 
   width: 100%;
   border-bottom: 1px solid $border;
@@ -31,6 +32,25 @@
 
   &-button-group {
     @include flexbox(start);
+
+    .gnb-auth {
+      margin-left: 16px - $button-margin-md;
+
+      a {
+        @include text-style(14, $secondary);
+        font-weight: 700;
+        transition: color 200ms ease-in-out;
+
+        &:hover,
+        &:active {
+          color: $blue;
+        }
+
+        &:first-child {
+          margin-right: 12px;
+        }
+      }
+    }
   }
 
   .search-btn {
@@ -64,7 +84,7 @@
       margin-right: 24px;
 
       .gnb-icon-btn {
-        margin-right: 8px;
+        margin-right: $button-margin-md;
 
         &:last-child {
           margin-right: 0;
