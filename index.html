@@ -22,17 +22,22 @@
   </head>
   <body>
     <header class="gnb">
+      <!-- viewport 기준 100% width를 가진 border 구현을 위하여 header는 grid-system으로 감싸지 않음. -->
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
+            <!--  grid system 적용 -->
             <div class="gnb-wrap">
               <div class="gnb-left">
+                <!-- 각 device 디자인 대응하기위해 왼쪽 / 오른쪽에 위치한 요소를 각각 감싸줌. -->
                 <h1 class="gnb-title" aria-label="내일의 집">
+                  <!-- h1에 img요소만 있고 text contents가 없기에 aria-label을 활용해 시멘틱 마크업 구현 -->
                   <a href="/">
                     <img src="./assets/images/logo.svg" alt="" />
                   </a>
                 </h1>
                 <nav class="gnb-nav sm-hidden">
+                  <h2 class="visually-hidden">메뉴</h2>
                   <ul class="gnb-nav-list">
                     <li class="gnb-nav-item">
                       <a href="/" aria-label="커뮤니티 페이지로 이동"
