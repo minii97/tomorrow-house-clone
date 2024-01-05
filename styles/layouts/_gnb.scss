@@ -1,5 +1,6 @@
 .gnb {
   $gnb-height-sm: 50px;
+  $gnb-height-md: 80px;
 
   width: 100%;
   border-bottom: 1px solid $border;
@@ -28,20 +29,25 @@
     }
   }
 
+  &-button-group {
+    @include flexbox(start);
+  }
+
   .search-btn {
     margin-right: 4px;
   }
 
   @include responsive(T) {
-    height: 80px;
-
     &-wrap {
-      height: 80px;
+      height: $gnb-height-md - 1px;
     }
 
-    &-left,
-    &-right {
+    &-left {
       @include flexbox(start);
+    }
+
+    &-right {
+      @include flexbox(end);
     }
 
     &-title {
@@ -55,12 +61,9 @@
     }
 
     &-button-group {
-      @include flexbox(start);
       margin-right: 24px;
 
-      a,
-      button,
-      .search-btn {
+      .gnb-icon-btn {
         margin-right: 8px;
 
         &:last-child {
