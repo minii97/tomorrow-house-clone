@@ -112,7 +112,8 @@
   }
 
   @include responsive(D) {
-    .search-input-group {
+    .gnb-search {
+      position: relative;
       width: 264px;
       margin-right: 24px;
     }
