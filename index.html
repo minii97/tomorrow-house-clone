@@ -169,15 +169,35 @@
                     >
                       <i class="ic-cart" aria-hidden></i>
                     </a>
-                    <button
-                      class="avatar-32 sm-hidden"
-                      aria-label="마이 메뉴 열기"
-                    >
-                      <img
-                        src="./assets/images/img-user-03.jpg"
-                        alt="유저 프로필 사진"
-                      />
-                    </button>
+                    <div class="my-menu sm-hidden">
+                      <button
+                        class="avatar-32 my-menu-btn"
+                        type="button"
+                        aria-label="마이 메뉴 열기"
+                      >
+                        <img
+                          src="./assets/images/img-user-03.jpg"
+                          alt="유저 프로필 사진"
+                        />
+                      </button>
+
+                      <div class="my-menu-contents">
+                        <ul class="my-menu-list">
+                          <li class="my-menu-itme">
+                            <a href="/">마이페이지</a>
+                          </li>
+                          <li class="my-menu-itme">
+                            <a href="/">나의 쇼핑</a>
+                          </li>
+                          <li class="my-menu-itme">
+                            <a href="/">이벤트</a>
+                          </li>
+                          <li class="my-menu-itme">
+                            <button type="button">로그아웃</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- NOTE : 로그인 안했을 때 -->
