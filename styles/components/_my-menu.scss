@@ -1,0 +1,66 @@
+.my-menu {
+  position: relative;
+
+  &.is-active {
+    .my-menu-contents {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translate3d(0, 0, 0);
+    }
+
+    .my-menu-btn {
+      border-color: $blue;
+    }
+  }
+
+  &-contents {
+    @include pos-center-x;
+    top: 48px;
+    width: 200px;
+    padding: 8px;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translate3d(0, -10%, 0);
+    box-shadow: $drop-shadow;
+    transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out,
+      transform 200ms ease-in-out;
+
+    &::before,
+    &::after {
+      @include pos-center-x;
+      border-top: 9px solid transparent;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+      content: '';
+    }
+
+    &::before {
+      top: -21px;
+      border-bottom: 11px solid $border;
+    }
+
+    &::after {
+      top: -20px;
+      border-bottom: 11px solid $white;
+    }
+
+    .my-menu-item {
+      a,
+      button {
+        @include text-style(16, $primary);
+        display: block;
+        width: 100%;
+        padding: 10px 8px;
+        text-align: left;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: $background;
+        }
+      }
+    }
+  }
+}
