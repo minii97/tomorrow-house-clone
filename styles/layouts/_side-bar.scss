@@ -24,10 +24,13 @@
       }
     }
 
-    .sidebar-user {
+    .sidebar-user,
+    .sidebar-auth {
       @include flexbox(start);
-
       height: 88px;
+    }
+
+    .sidebar-user {
       padding: 0 12px;
 
       a {
@@ -50,6 +53,16 @@
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+        }
+      }
+    }
+
+    .sidebar-auth {
+      .button-40 {
+        width: 84px;
+
+        &:first-child {
+          margin-right: 8px;
         }
       }
     }
