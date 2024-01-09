@@ -1,0 +1,76 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 32px 20px;
+  overflow-y: auto;
+  background-color: $white;
+  overscroll-behavior: contain;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-header {
+    .logo {
+      @include flexbox(start);
+
+      img {
+        display: block;
+        width: auto;
+        height: 20px;
+      }
+    }
+
+    .sidebar-user {
+      @include flexbox(start);
+
+      height: 88px;
+      padding: 0 12px;
+
+      a {
+        @include flexbox(start);
+        width: 100%;
+
+        &:active {
+          opacity: 0.4;
+        }
+
+        .avatar-24 {
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin-right: 8px;
+        }
+
+        .username {
+          @include text-style(14, $primary);
+          flex-grow: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &-user-menu {
+    margin-top: 16px;
+
+    .sidebar-menu-item {
+      &.is-active,
+      &:active {
+        a {
+          color: $blue;
+        }
+      }
+
+      a {
+        @include text-style(14, $primary);
+        display: block;
+        padding: 6px 12px;
+      }
+    }
+  }
+}
