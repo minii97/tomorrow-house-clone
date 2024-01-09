@@ -3,6 +3,7 @@
 @import './constants/breakpoint';
 @import './constants/grids';
 @import './constants/box-shadow';
+@import './constants/z-indexes';
 
 @import './base/icon-fonts';
 @import './base/normalize';
@@ -23,7 +24,8 @@
 @import './modules/pagination';
 
 @import './layouts/gnb';
-@import './layouts/side-bar';
+@import './layouts/sidebar';
+@import './layouts/overlay';
 
 @import './components/gnb-nav';
 @import './components/gnb-icon-buttons';
