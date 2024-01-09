@@ -116,6 +116,26 @@
       position: relative;
       width: 264px;
       margin-right: 24px;
+
+      .search-history {
+        $search-input-height: 40px;
+        position: absolute;
+        top: $search-input-height + 8px;
+        display: none;
+        padding: 16px 8px 8px;
+        background-color: $white;
+        border: 1px solid $border;
+        border-radius: 4px;
+        box-shadow: $dropdown-shadow;
+
+        &.is-active {
+          display: block;
+        }
+
+        &-header {
+          padding: 0 8px;
+        }
+      }
     }
   }
 }

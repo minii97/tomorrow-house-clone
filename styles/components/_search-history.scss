@@ -1,24 +1,9 @@
 .search-history {
-  $search-input-height: 40px;
   $delete-btn-size: 32px;
-
-  position: absolute;
-  top: $search-input-height + 8px;
-  display: none;
   width: 100%;
-  padding: 16px 8px 8px;
-  background-color: $white;
-  border: 1px solid $border;
-  border-radius: 4px;
-  box-shadow: $dropdown-shadow;
-
-  &.is-active {
-    display: block;
-  }
 
   &-header {
     @include flexbox(between);
-    padding: 0 8px;
     margin-bottom: 8px;
 
     .search-history-title,
@@ -27,7 +12,8 @@
       font-weight: 400;
     }
 
-    button:hover {
+    button:hover,
+    button:active {
       color: $primary;
     }
   }
@@ -36,7 +22,8 @@
     .search-history-item {
       position: relative;
 
-      &:hover {
+      &:hover,
+      &:active {
         background-color: $background;
       }
 
@@ -57,7 +44,8 @@
         font-size: 16px;
         color: $tertiary;
 
-        &:hover {
+        &:hover,
+        &:active {
           color: $primary;
         }
       }
