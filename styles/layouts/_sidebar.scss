@@ -9,9 +9,15 @@
   overflow-y: auto;
   background-color: $white;
   overscroll-behavior: contain;
+  transition: transform 300ms ease-in-out;
+  transform: translate3d(-100%, 0, 0);
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
   }
 
   &-header {
