@@ -1,9 +1,8 @@
 .gnb {
-  $gnb-height-sm: 50px;
-  $gnb-height-md: 80px;
   $button-margin-md: 8px;
 
   width: 100%;
+  background-color: $white;
   border-bottom: 1px solid $border;
 
   &-wrap {

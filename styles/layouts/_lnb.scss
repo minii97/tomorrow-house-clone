@@ -1,8 +1,7 @@
 .lnb {
-  $lnb-height-sm: 40px;
-  $lnb-height-md: 50px;
   width: 100%;
-  height: $lnb-height-sm - 1px;
+  height: $lnb-height-sm;
+  background-color: $white;
   border-bottom: 1px solid $border;
 
   &-list {
@@ -22,7 +21,7 @@
     a {
       @include text-style(13, $dark);
       @include inline-flexbox;
-      height: $lnb-height-sm;
+      height: $lnb-height-sm + 1px;
       padding: 0 8px;
       font-weight: 700;
       border-bottom: 2px solid transparent;
@@ -48,7 +47,7 @@
   }
 
   @include responsive(T) {
-    height: $lnb-height-md - 1px;
+    height: $lnb-height-md;
 
     &-list {
       padding: 0;
@@ -58,7 +57,7 @@
     &-item {
       a {
         @include text-style(14);
-        height: $lnb-height-md;
+        height: $lnb-height-md + 1px;
       }
     }
   }

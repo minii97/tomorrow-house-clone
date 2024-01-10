@@ -4,6 +4,7 @@
 @import './constants/grids';
 @import './constants/box-shadow';
 @import './constants/z-indexes';
+@import './constants/dimensions';
 
 @import './base/icon-fonts';
 @import './base/normalize';
@@ -25,6 +26,7 @@
 
 @import './layouts/gnb';
 @import './layouts/lnb';
+@import './layouts/global-header';
 @import './layouts/sidebar';
 @import './layouts/search-modal';
 @import './layouts/overlay';
