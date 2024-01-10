@@ -9,12 +9,6 @@
   border-radius: 50%;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 
-  &:hover,
-  &:active {
-    color: $white;
-    background-color: $blue;
-  }
-
   &.menu-btn {
     color: $blue;
   }
@@ -37,5 +31,12 @@
     text-align: center;
     background-color: $red;
     border-radius: $badge-size/2;
+  }
+
+  @include responsive(D) {
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
   }
 }
