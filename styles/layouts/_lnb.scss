@@ -21,7 +21,7 @@
     a {
       @include text-style(13, $dark);
       @include inline-flexbox;
-      height: $lnb-height-sm + 1px;
+      height: $lnb-height-sm;
       padding: 0 8px;
       font-weight: 700;
       border-bottom: 2px solid transparent;
@@ -57,7 +57,7 @@
     &-item {
       a {
         @include text-style(14);
-        height: $lnb-height-md + 1px;
+        height: $lnb-height-md;
       }
     }
   }
