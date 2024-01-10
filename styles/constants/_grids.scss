@@ -5,7 +5,7 @@ $sm-columns: 4;
 
 $md-margin: 30px;
 $md-columns: 12;
-$md-max-container: 960px;
+$md-max-container: 960px + ($md-margin * 2);
 
 $lg-columns: 12;
 $lg-max-container: 1140px;
