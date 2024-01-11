@@ -15,6 +15,7 @@
 @import './mixin/responsive';
 @import './mixin/flexbox';
 @import './mixin/positions';
+@import './mixin/star-rating';
 
 @import './modules/tags';
 @import './modules/avatars';
@@ -38,3 +39,4 @@
 @import './components/drawer-menu';
 @import './components/breadcrumb';
 @import './components/product-carousel';
+@import './components/product-info';

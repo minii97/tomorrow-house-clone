@@ -1,0 +1,143 @@
+.product-info {
+  padding-top: 20px;
+
+  &-header,
+  &-price {
+    margin-bottom: 16px;
+  }
+
+  &-header {
+    .info-seller {
+      @include text-style(13, $blue);
+      font-weight: 700;
+      transition: opacity 200ms ease-in-out;
+
+      &:active,
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    .product-name {
+      @include text-style(18, $dark);
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+
+    .info-review {
+      @include flexbox(start);
+
+      .star-rating {
+        @include star-rating(13px);
+        margin-right: 8px;
+      }
+
+      p {
+        @include text-style(13, $blue);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-price {
+    .info-discount,
+    .selling-price {
+      @include flexbox(start);
+    }
+
+    .discount-rate {
+      @include flexbox(start, end);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $blue;
+
+      .rate {
+        font-family: $font-price;
+      }
+    }
+
+    .selling-price {
+      margin-bottom: 12px;
+
+      .price-20 {
+        margin-right: 4px;
+      }
+    }
+
+    .info-point {
+      @include text-style(13, $secondary);
+
+      strong {
+        color: $blue;
+      }
+    }
+  }
+
+  &-delivery {
+    padding: 12px 0 20px;
+    border-top: 1px solid $border;
+
+    p {
+      @include text-style(16, $primary);
+      margin-bottom: 2px;
+    }
+  }
+
+  @include responsive(T) {
+    padding-top: 0;
+
+    &-header {
+      .info-seller {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      .product-name {
+        @include text-style(24);
+        margin-bottom: 8px;
+      }
+
+      .info-review {
+        .star-rating {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-price {
+      margin-bottom: 20px;
+
+      .info-price-wrapper {
+        @include flexbox(start, end);
+        margin-bottom: 12px;
+      }
+
+      .discount-rate {
+        margin-right: 16px;
+
+        .rate {
+          font-size: 44px;
+          line-height: 36px;
+        }
+
+        .percent {
+          line-height: 20px;
+        }
+      }
+
+      .selling-price {
+        margin-bottom: 0;
+      }
+
+      .price-32 {
+        margin-right: 8px;
+      }
+    }
+
+    &-delivery {
+      padding-top: 16px;
+      border-bottom: 1px solid $border;
+    }
+  }
+}
