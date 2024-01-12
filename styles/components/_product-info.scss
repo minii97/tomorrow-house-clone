@@ -140,4 +140,8 @@
       border-bottom: 1px solid $border;
     }
   }
+
+  @include responsive(D) {
+    margin-bottom: 20px;
+  }
 }
