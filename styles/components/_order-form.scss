@@ -1,6 +1,7 @@
 .order-form {
   &-selects,
-  .summary {
+  .summary,
+  &-checkout {
     margin-bottom: 20px;
   }
 
@@ -9,6 +10,12 @@
       &:first-child {
         margin-bottom: 8px;
       }
+    }
+  }
+
+  &-checkout {
+    .checkout-item {
+      margin-bottom: 8px;
     }
   }
 
