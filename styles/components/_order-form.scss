@@ -1,0 +1,35 @@
+.order-form {
+  &-selects,
+  .summary {
+    margin-bottom: 20px;
+  }
+
+  &-selects {
+    .select-group {
+      &:first-child {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .summary {
+    @include flexbox(between);
+
+    dt {
+      @include text-style(13, $dark);
+      font-weight: 700;
+    }
+  }
+
+  &-buttons {
+    @include flexbox(start);
+
+    .button-55 {
+      width: 50%;
+
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+}
