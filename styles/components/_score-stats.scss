@@ -1,0 +1,75 @@
+.score-stats {
+  &-item {
+    @include flexbox(start);
+    @include text-style(12, $secondary);
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+
+    &.is-active {
+      dt,
+      .count {
+        font-weight: 700;
+        color: $blue;
+      }
+    }
+
+    dt {
+      margin-right: 4px;
+    }
+
+    dd {
+      @include flexbox(start);
+
+      .bar-graph,
+      .active-bar {
+        height: 5px;
+        border-radius: 5px / 2px;
+      }
+
+      .bar-graph {
+        width: 70px;
+        margin-right: 4px;
+        overflow: hidden;
+        background-color: $border;
+
+        .active-bar {
+          width: 0;
+          background-color: $blue;
+          animation-duration: 0.5s;
+          animation-name: active-bar-animation;
+        }
+      }
+
+      .count {
+        font-weight: 400;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-item {
+      dt {
+        margin-right: 8px;
+      }
+
+      dd {
+        .bar-graph {
+          width: 180px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes active-bar-animation {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
