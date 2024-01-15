@@ -1,0 +1,61 @@
+.product-spec {
+  $button-height: 55px;
+  $section-padding: 20px;
+
+  position: relative;
+  height: 470px;
+  padding-top: $section-padding;
+  overflow: hidden;
+
+  &.is-open {
+    height: auto;
+
+    .btn-wrapper {
+      display: none;
+    }
+  }
+
+  .btn-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: $section-padding;
+    background-color: $white;
+
+    button {
+      width: 100%;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: $button-height + $section-padding;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      background-image: linear-gradient(to top, $white 0%, transparent 100%);
+      content: '';
+    }
+  }
+
+  figure {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .product-table {
+    margin-top: 20px;
+  }
+
+  @include responsive(T) {
+    height: auto;
+    padding-top: 0;
+
+    .product-table {
+      margin-top: 40px;
+    }
+  }
+}
