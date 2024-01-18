@@ -721,6 +721,7 @@
             </section>
             <div class="product-section-divider sm-only" aria-hidden></div>
 
+            <!-- NOTE : 리뷰가 1개 이상인 경우. -->
             <section
               class="product-section product-review"
               aria-labelledby="product-review"
@@ -892,7 +893,12 @@
                       </header>
 
                       <div class="review-card-body">
-                        <img src="./assets/images/img-review-02.jpg" alt="" />
+                        <div class="review-image">
+                          <img
+                            src="./assets/images/img-review-02.jpg"
+                            alt="본조르노님의 리뷰 이미지"
+                          />
+                        </div>
 
                         <p>
                           온도 조절과 타이머가 안 된다는 걸 뒤늦게 알았지만
@@ -1012,11 +1018,11 @@
                       </div>
 
                       <footer class="review-card-footer">
-                        <button class="button-32 button-outlined" type="button">
+                        <button class="button-32 button-primary" type="button">
                           <i class="ic-check" aria-hidden></i>도움됨
                         </button>
                         <p>
-                          <strong><span>1</span>명</strong> 에게 도움이
+                          <strong><span>1</span>명</strong>에게 도움이
                           되었습니다.
                         </p>
                       </footer>
@@ -1107,6 +1113,28 @@
               </div>
             </section>
             <div class="product-section-divider sm-only" aria-hidden></div>
+
+            <!-- NOTE : 리뷰가 0개인 경우. -->
+            <!-- <section
+              class="product-section product-review"
+              aria-labelledby="product-review"
+              role="tabpanel"
+            >
+              <header class="product-section-header">
+                <h2 class="title">리뷰</h2>
+                <strong class="count" aria-label="0개">0</strong>
+                <a class="text-btn" href="/">리뷰쓰기</a>
+              </header>
+
+              <div class="product-section-content">
+                <p class="review-empty">
+                  첫 리뷰를 남겨주세요! <br />
+                  최대
+                  <strong aria-label="500포인트">500P</strong>를 드립니다.
+                </p>
+              </div>
+            </section>
+            <div class="product-section-divider sm-only" aria-hidden></div> -->
           </div>
         </div>
       </div>
