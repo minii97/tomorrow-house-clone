@@ -41,7 +41,6 @@
   @include responsive(T) {
     height: 148px;
     padding: 0 72px;
-    margin-bottom: 40px;
 
     &::before {
       height: 72px;
