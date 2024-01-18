@@ -60,7 +60,7 @@
   }
 
   .prev {
-    margin-right: 24px;
+    margin-right: 16px;
 
     i {
       transform: rotate(90deg);
@@ -68,10 +68,20 @@
   }
 
   .next {
-    margin-left: 24px;
+    margin-left: 16px;
 
     i {
       transform: rotate(-90deg);
+    }
+  }
+
+  @include responsive(T) {
+    .prev {
+      margin-right: 24px;
+    }
+
+    .next {
+      margin-left: 24px;
     }
   }
 }
