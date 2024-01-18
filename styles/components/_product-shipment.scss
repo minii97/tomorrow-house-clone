@@ -1,0 +1,19 @@
+.product-shipment {
+  @media screen and (max-width: $md-breakpoint - 1px) {
+    .product-section,
+    .product-section-divider {
+      display: none;
+    }
+
+    &.is-open {
+      > .product-section-header {
+        display: none;
+      }
+
+      .product-section,
+      .product-section-divider {
+        display: block;
+      }
+    }
+  }
+}
