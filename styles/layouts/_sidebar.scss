@@ -56,10 +56,8 @@
 
         .username {
           @include text-style(14, $primary);
+          @include truncate;
           flex-grow: 1;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
         }
       }
     }
