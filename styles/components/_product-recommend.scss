@@ -1,0 +1,41 @@
+.product-recommend {
+  .recommendation-list {
+    @include flexbox(between, start);
+    flex-wrap: wrap;
+  }
+
+  .recommendation-item {
+    width: calc(50% - 10px);
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      &:active,
+      &:hover {
+        .recommendation-image {
+          img {
+            transform: translate(-50%, -50%) scale(1.1);
+          }
+        }
+
+        .title {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .recommendation-item {
+      width: calc(33.33333% - 11px);
+      margin-bottom: 0 !important;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
