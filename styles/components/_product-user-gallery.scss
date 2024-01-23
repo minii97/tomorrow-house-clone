@@ -1,0 +1,51 @@
+.product-user-gallery {
+  .user-gallery {
+    margin: 0 -15px;
+
+    &-slider {
+      margin-bottom: 4px;
+    }
+
+    &-thumbnail {
+      .thumbnail-list {
+        @include flexbox(start);
+        width: 100%;
+        padding: 0 2px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      .thumbnail-item {
+        margin-right: 4px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.tns-nav-active {
+          button {
+            border: 3px solid $blue;
+          }
+        }
+      }
+
+      button {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        overflow: hidden;
+        border-radius: 4px;
+
+        img {
+          @include pos-center;
+          width: 64px;
+          height: 64px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
