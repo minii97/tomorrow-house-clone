@@ -48,4 +48,82 @@
       }
     }
   }
+
+  @include responsive(T) {
+    .user-gallery {
+      margin: 0;
+
+      &-slider {
+        position: relative;
+        margin-bottom: 6px;
+      }
+
+      &-controls {
+        @include flexbox;
+        @include pos-center-y;
+        width: 100%;
+        padding: 0 58px;
+
+        button {
+          @include flexbox;
+          width: 40px;
+          height: 40px;
+          font-size: 28px;
+          color: $primary;
+          background-color: $white;
+          border-radius: 50%;
+          transition: color 200ms ease-in-out,
+            background-color 200ms ease-in-out;
+
+          &:active,
+          &:hover {
+            color: $white;
+            background-color: $blue;
+          }
+
+          &:disabled {
+            display: none;
+          }
+
+          &.prev {
+            position: absolute;
+            left: 58px;
+
+            i {
+              transform: rotate(90deg);
+            }
+          }
+
+          &.next {
+            position: absolute;
+            right: 58px;
+
+            i {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+      }
+
+      &-thumbnail {
+        .thumbnail-list {
+          padding: 0;
+        }
+
+        .thumbnail-item {
+          margin-right: 6px;
+        }
+
+        button {
+          width: 75px;
+          height: 75px;
+
+          img {
+            width: 75px;
+            height: 75px;
+          }
+        }
+      }
+    }
+  }
 }

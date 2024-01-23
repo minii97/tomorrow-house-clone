@@ -23,3 +23,19 @@ const userGalleryMobile = tns({
   mouseDrag: true,
   preventScrollOnTouch: true,
 })
+
+const userGalleryAfterTablet = tns({
+  container: '.user-gallery.is-tablet .slider-list',
+  controls: true,
+  controlsContainer: '.user-gallery.is-tablet .user-gallery-controls',
+  nextButton: '.user-gallery-controls .next',
+  prevButton: '.user-gallery-controls .prev',
+  loop: false,
+  gutter: 6,
+  edgePadding: 81,
+  navContainer: '.user-gallery.is-tablet .thumbnail-list',
+  navAsThumbnails: true,
+  arrowKeys: true,
+  mouseDrag: true,
+  preventScrollOnTouch: true,
+})
