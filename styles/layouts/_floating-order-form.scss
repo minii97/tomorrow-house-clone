@@ -1,0 +1,72 @@
+.floating-order-form {
+  $global-header-height: $gnb-height-md + $lnb-height-md +
+    $product-tab-height-md;
+  $global-footer-height: 186px;
+
+  @include flexbox(start, start);
+  position: sticky;
+  top: $global-header-height;
+  flex-direction: column;
+  max-height: calc(100vh - #{$global-header-height});
+  min-height: calc(100vh - #{($global-header-height + $global-footer-height)});
+  padding: 24px 0;
+
+  > * {
+    width: 100%;
+
+    &:not(.order-form-checkout) {
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .order-form-checkout {
+    flex-grow: 1;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .order-form-buttons {
+    .button-55 {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .bookmark-btn {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 55px;
+      font-size: 32px;
+      color: $primary;
+      border: 1px solid $border;
+      border-radius: 4px;
+      transition: background-color 200ms ease-in-out;
+
+      .ic-bookmark-filled {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $background;
+      }
+
+      &.is-active {
+        color: $blue;
+
+        .ic-bookmark {
+          display: none;
+        }
+
+        .ic-bookmark-filled {
+          display: block;
+        }
+      }
+    }
+  }
+}
