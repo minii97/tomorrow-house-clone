@@ -1,0 +1,91 @@
+.global-footer {
+  padding: 32px 0 40px;
+  background-color: $background;
+
+  &-title {
+    a {
+      @include inline-flexbox(start);
+      @include text-style(13, $dark);
+      transition: opacity 200ms ease-in-out;
+
+      &:hover,
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+    i {
+      font-size: 12px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &-contact {
+    a {
+      @include text-style(24, $dark);
+      font-weight: 700;
+      transition: opacity 200ms ease-in-out;
+
+      &:hover,
+      &:active {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &-time {
+    @include text-style(12, $primary);
+    margin-bottom: 24px;
+  }
+
+  &-detail-item {
+    @include flexbox(start);
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: $secondary;
+
+    a:hover,
+    a:active {
+      text-decoration: underline;
+    }
+
+    dt::after {
+      margin: 0 2px;
+      content: ':';
+    }
+
+    address {
+      display: inline;
+    }
+  }
+
+  @include responsive(T) {
+    &-detail-item {
+      @include text-style(12);
+    }
+  }
+
+  @include responsive(D) {
+    &-title {
+      a {
+        @include text-style(14);
+      }
+    }
+
+    &-detail-list {
+      @include flexbox(start);
+    }
+
+    &-detail-item {
+      &::after {
+        margin: 0 4px;
+        content: '|';
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
+}
