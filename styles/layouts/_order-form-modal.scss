@@ -1,0 +1,74 @@
+.order-form-modal {
+  @include no-scrollbar;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $order-form-modal-level;
+  display: none;
+  width: 100%;
+  max-height: 50vh;
+  padding-top: 16px;
+  overflow: auto;
+  background-color: $white;
+  border-radius: 12px 12px 0 0;
+  box-shadow: $dropdown-shadow;
+  overscroll-behavior: contain;
+
+  &.is-open {
+    display: block;
+    animation-duration: 500ms;
+    animation-name: modal-fade-in;
+    animation-timing-function: ease-in-out;
+  }
+
+  .order-form {
+    .order-form-selects {
+      margin-bottom: 0;
+    }
+
+    .order-form-checkout {
+      margin: 10px 0 0;
+
+      .checkout-title {
+        @include text-style(13);
+      }
+    }
+
+    .summary {
+      margin: 16px 0 16px+48px+4px 0;
+    }
+
+    .order-form-buttons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 4px;
+      padding-top: 0;
+      background-color: $white;
+
+      .button-48 {
+        width: 50%;
+
+        &:first-child {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  @include responsive(T) {
+    padding-top: 32px;
+  }
+}
+
+@keyframes modal-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
