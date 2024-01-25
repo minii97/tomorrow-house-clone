@@ -6,15 +6,12 @@
 
   &-list {
     @include flexbox(start);
+    @include no-scrollbar;
     padding: 0 8px;
     margin: 0 -15px;
     overflow-x: auto;
     overscroll-behavior: contain;
     white-space: nowrap;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 
   &-item {

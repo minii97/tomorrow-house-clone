@@ -21,13 +21,10 @@
   }
 
   .order-form-checkout {
+    @include no-scrollbar;
     flex-grow: 1;
     overflow: auto;
     overscroll-behavior: contain;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 
   .order-form-buttons {

@@ -1,0 +1,7 @@
+//sass-lint:disable-all
+
+@mixin no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

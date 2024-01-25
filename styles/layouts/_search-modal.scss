@@ -1,4 +1,5 @@
 .search-modal {
+  @include no-scrollbar;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,10 +14,6 @@
 
   &.is-active {
     display: block;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 
   &-header {

@@ -9,13 +9,10 @@
     &-thumbnail {
       .thumbnail-list {
         @include flexbox(start);
+        @include no-scrollbar;
         width: 100%;
         padding: 0 2px;
         overflow: auto;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
       }
 
       .thumbnail-item {
