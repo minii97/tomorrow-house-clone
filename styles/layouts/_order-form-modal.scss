@@ -4,21 +4,24 @@
   bottom: 0;
   left: 0;
   z-index: $order-form-modal-level;
-  display: none;
   width: 100%;
   max-height: 50vh;
   padding-top: 16px;
   overflow: auto;
   background-color: $white;
   border-radius: 12px 12px 0 0;
-  box-shadow: $dropdown-shadow;
   overscroll-behavior: contain;
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0);
+  box-shadow: $dropdown-shadow;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out,
+    visibility 300ms ease-in-out;
+  opacity: 0;
 
   &.is-open {
-    display: block;
-    animation-duration: 500ms;
-    animation-name: modal-fade-in;
-    animation-timing-function: ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
   }
 
   .order-form {
@@ -58,17 +61,5 @@
   }
   @include responsive(T) {
     padding-top: 32px;
-  }
-}
-
-@keyframes modal-fade-in {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
 }
