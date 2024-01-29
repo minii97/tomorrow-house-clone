@@ -26,14 +26,13 @@ function toggleOrderCtaBookmark() {
   let newCount = count
 
   if (this.classList.contains('is-active')) {
-    icon.classList.add('ic-bookmark')
-    icon.classList.remove('ic-bookmark-filled')
     newCount = newCount - 1
   } else {
-    icon.classList.remove('ic-bookmark')
-    icon.classList.add('ic-bookmark-filled')
     newCount = newCount + 1
   }
+
+  icon.classList.toggle('ic-bookmark')
+  icon.classList.toggle('ic-bookmark-filled')
 
   span.innerHTML = newCount.toLocaleString()
 
