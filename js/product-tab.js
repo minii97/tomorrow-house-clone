@@ -35,3 +35,32 @@ productTabBtnList.forEach((items) => {
   items.addEventListener('click', ActiveTab)
   items.addEventListener('click', scrollToTabPanel)
 })
+
+const productTabPanelIdList = [
+  'product-spec',
+  'product-review',
+  'product-inquiry',
+  'product-shipment',
+  'product-recommend',
+]
+
+const productTabPanelList = productTabPanelIdList.map((panelId) => {
+  const tabPanel = document.querySelector(`[aria-labelledby="${panelId}"]`)
+  return tabPanel
+})
+
+const productTabPanelPositionMap = {}
+
+function detectTabPanelPosition() {
+  productTabPanelList.forEach((items) => {
+    const id = items.getAttribute('aria-labelledby')
+    const position = window.scrollY + items.getBoundingClientRect().top
+
+    productTabPanelPositionMap[id] = position
+  })
+
+  console.log(productTabPanelPositionMap)
+}
+
+window.addEventListener('load', detectTabPanelPosition)
+window.addEventListener('resize', detectTabPanelPosition)
