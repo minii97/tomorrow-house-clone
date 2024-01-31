@@ -58,9 +58,43 @@ function detectTabPanelPosition() {
 
     productTabPanelPositionMap[id] = position
   })
+}
 
-  console.log(productTabPanelPositionMap)
+function updateActiveTabOnScroll() {
+  //스크롤 위치에 따라서 active-tab 업데이트
+  // 1. 현재 유저가 얼마나 스크롤 했는가?
+  // 2. 요소가 문서 시작점으로부터 얼마나 아래에 있는가?
+  // -> productTabPanelPositionMap의 value로 저장해두었다.
+
+  const scrolledAmount =
+    window.scrollY +
+    (window.innerWidth >= 768 ? TOP_HEADER_DESKTOP + 80 : TOP_HEADER_MOBILE + 8)
+
+  let newActiveTab
+
+  if (scrolledAmount >= productTabPanelPositionMap['product-recommend']) {
+    newActiveTab = productTabBtnList[4] // 추천 버튼
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-shipment']) {
+    newActiveTab = productTabBtnList[3] // 배송/환불 버튼
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-inquiry']) {
+    newActiveTab = productTabBtnList[2] // 문의 버튼
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-review']) {
+    newActiveTab = productTabBtnList[1] // 리뷰 버튼
+  } else {
+    newActiveTab = productTabBtnList[0] // 상품 정보 버튼
+  }
+
+  if (newActiveTab) {
+    newActiveTab = newActiveTab.parentNode
+
+    if (newActiveTab !== currentActiveTab) {
+      newActiveTab.classList.add('is-active')
+      currentActiveTab.classList.remove('is-active')
+      currentActiveTab = newActiveTab
+    }
+  }
 }
 
 window.addEventListener('load', detectTabPanelPosition)
 window.addEventListener('resize', detectTabPanelPosition)
+window.addEventListener('scroll', updateActiveTabOnScroll)
