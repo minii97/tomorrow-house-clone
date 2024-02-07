@@ -75,8 +75,8 @@
 
 @font-face {
   font-family: 'tomorrow';
-  src: url("/assets/fonts/tomorrow.eot");
-  src: url("/assets/fonts/tomorrow.eot?lhtqwn#iefix") format("embedded-opentype"), url("/assets/fonts/tomorrow.ttf?lhtqwn") format("truetype"), url("/assets/fonts/tomorrow.woff?lhtqwn") format("woff"), url("/assets/fonts/tomorrow.svg?lhtqwn#tomorrow") format("svg");
+  src: url("./assets/fonts/tomorrow.eot");
+  src: url("./assets/fonts/tomorrow.eot?lhtqwn#iefix") format("embedded-opentype"), url("./assets/fonts/tomorrow.ttf?lhtqwn") format("truetype"), url("./assets/fonts/tomorrow.woff?lhtqwn") format("woff"), url("./assets/fonts/tomorrow.svg?lhtqwn#tomorrow") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -562,7 +562,7 @@ address {
 .avatar-32, .avatar-24 {
   display: block;
   overflow: hidden;
-  background-image: url(/assets/images/img-user-default.png);
+  background-image: url(./assets/images/img-user-default.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
